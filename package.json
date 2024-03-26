@@ -43,7 +43,12 @@
     "test:watch": "yarn test --watch",
     "test:coverage": "yarn test --coverage",
     "make-badges": "istanbul-badges-readme",
+    "make-badges-silent": "istanbul-badges-readme --silent",
+    "make-badges-custom-coverage-dir": "istanbul-badges-readme --coverageDir='./coverage'",
+    "make-badges-custom-readme-dir": "istanbul-badges-readme --readmeDir='./README.md'",
     "eject": "react-scripts eject"
+
+
   },
   "husky": {
     "hooks": {
