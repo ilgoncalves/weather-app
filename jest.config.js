@@ -8,6 +8,7 @@ module.exports = {
   ],
   coverageDirectory: 'coverage',
   testEnvironment: 'jsdom',
+  coverageReporters: ['json-summary'],
   transform: {
     '.+\\.(ts|tsx)$': 'ts-jest',
     '^.+\\.[jt]sx?$': 'babel-jest',
