@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #455a64;
+  padding: 20px 0;
+  width: 100%;
+  color: white;
+  font-size: calc(20px + 2vmin);
+  font-weight: 600;
+}
+
+.appLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.headerTitle {
+  margin: 0;
+}
