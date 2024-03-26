@@ -47,7 +47,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test && istanbul-badges-readme && git add 'README.md'"
+      "pre-commit": "npm rnpx husky initun test && istanbul-badges-readme && git add 'README.md'"
     }
   },
   "eslintConfig": {
