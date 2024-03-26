@@ -1,0 +1,59 @@
+$thumb-color: #ec6e4c;
+
+$active-color: #ec6f4c8b;
+
+$off-color: #0000003d;
+
+.container {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.label {
+  margin: 0 12px;
+  position: relative;
+  font-size: 1.5rem;
+}
+.switch {
+  &:before,
+  &:after {
+    content: '';
+  }
+  &:before {
+    display: block;
+    position: absolute;
+    background: $thumb-color;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    top: -5px;
+    left: 0;
+    -webkit-box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.35);
+    box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.35);
+    transition: left 0.15s;
+  }
+
+  display: inline-block;
+  background: $off-color;
+  border-radius: 16px;
+  width: 52px;
+  height: 22px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+
+  .switchInput:checked + & {
+    background: $active-color;
+    &:before {
+      left: 20px;
+    }
+  }
+}
+
+.switchInput {
+  position: absolute;
+  visibility: hidden;
+}
