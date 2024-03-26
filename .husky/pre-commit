@@ -1,1 +1,1 @@
-yarn test:coverage
+yarn test:coverage && istanbul-badges-readme && git add 'README.md'
