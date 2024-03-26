@@ -1,0 +1,65 @@
+.selectAnimated {
+  position: relative;
+  color: #000;
+  width: 200px;
+  font-family: Arial, sans-serif;
+  user-select: none;
+
+  .selectDisplay {
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+
+    .arrow {
+      border: solid black;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 3px;
+      transform: rotate(45deg);
+      transition: transform 0.3s ease-in-out;
+
+      &.open {
+        transform: rotate(225deg);
+      }
+    }
+  }
+
+  .selectOptions {
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: white;
+    z-index: 10;
+    overflow-y: scroll;
+    max-height: 10rem;
+
+    clip: rect(auto, auto, 0, auto);
+
+    transition-property: clip;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &.show {
+      clip: rect(auto, auto, 10rem, auto);
+    }
+
+    li {
+      padding: 10px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+
+      &.selected {
+        background-color: #e9ecef;
+      }
+    }
+  }
+}
