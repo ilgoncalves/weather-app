@@ -47,8 +47,13 @@
     "make-badges-custom-coverage-dir": "istanbul-badges-readme --coverageDir='./coverage'",
     "make-badges-custom-readme-dir": "istanbul-badges-readme --readmeDir='./README.md'",
     "eject": "react-scripts eject"
-
-
+  },
+  "jest": {
+    "coverageReporters": [
+      "json-summary", 
+      "text",
+      "lcov"
+    ]
   },
   "husky": {
     "hooks": {
