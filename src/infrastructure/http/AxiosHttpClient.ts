@@ -9,7 +9,7 @@ export class AxiosHttpClient implements HttpClient {
       response = await axios.request({
         url: data.url,
         method: data.method,
-        data: data.body,
+        data: data.method === 'get' ? undefined : data.body,
         params: data.queryParams,
       });
     } catch (error) {
@@ -17,7 +17,6 @@ export class AxiosHttpClient implements HttpClient {
         response = error.response;
       }
     }
-
     if (!response) {
       throw new Error('Unexpected error');
     }
