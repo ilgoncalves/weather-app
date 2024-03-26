@@ -7,7 +7,7 @@ export class ByPassCorsHttpClientDecorator implements HttpClient {
   async request(data: HttpRequest): Promise<HttpResponse> {
     return this.httpClient.request({
       ...data,
-      url: `${this.byPassUrl}/${data.url}`,
+      url: this.byPassUrl ? `${this.byPassUrl}/${data.url}` : data.url,
     });
   }
 }
